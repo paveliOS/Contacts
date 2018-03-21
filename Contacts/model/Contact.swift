@@ -48,18 +48,4 @@ extension Contact {
         self.zipCode = json[Key.zipCode.rawValue] as? String
     }
     
-    func toJSON() -> [String : Any] {
-        var jsonDict: [String : Any] = [:]
-        jsonDict[Key.contactID.rawValue] = contactID
-        jsonDict[Key.firstName.rawValue] = firstName
-        jsonDict[Key.lastName.rawValue] = lastName
-        jsonDict[Key.phoneNumber.rawValue] = phoneNumber
-        jsonDict[Key.streetAddress1.rawValue] = streetAddress1
-        jsonDict[Key.streetAddress2.rawValue] = streetAddress2
-        jsonDict[Key.city.rawValue] = city
-        jsonDict[Key.state.rawValue] = state
-        jsonDict[Key.zipCode.rawValue] = zipCode
-        return jsonDict
-    }
-    
 }
