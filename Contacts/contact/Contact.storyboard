@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Contact View Controller-->
+        <scene sceneID="SPS-Ix-dzN">
+            <objects>
+                <tableViewController storyboardIdentifier="ContactViewController" id="xdR-2k-mwe" customClass="ContactViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8PH-9N-4xt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="CFP-xn-Xhe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9cz-5I-gjB">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9cz-5I-gjB" id="42I-Ev-TLP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yca-K1-5VU" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="First name"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="Ra0-wC-geS"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="tp1-1H-Eku"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Yca-K1-5VU" secondAttribute="trailing" constant="20" symbolic="YES" id="Ju6-zc-IaA"/>
+                                                <constraint firstItem="Yca-K1-5VU" firstAttribute="leading" secondItem="42I-Ev-TLP" secondAttribute="leading" constant="20" symbolic="YES" id="Rzp-G8-62Z"/>
+                                                <constraint firstItem="Yca-K1-5VU" firstAttribute="centerY" secondItem="42I-Ev-TLP" secondAttribute="centerY" id="lUL-Uh-a9c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="58C-g4-O1u">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="58C-g4-O1u" id="DBj-nT-Oo7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-cB-Sx5" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Last name"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="iUA-tV-FdK"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="1NN-8i-jTe"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Yu-cB-Sx5" firstAttribute="leading" secondItem="DBj-nT-Oo7" secondAttribute="leading" constant="20" symbolic="YES" id="9U4-H2-7fG"/>
+                                                <constraint firstItem="1Yu-cB-Sx5" firstAttribute="centerY" secondItem="DBj-nT-Oo7" secondAttribute="centerY" id="ORv-VT-MCs"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Yu-cB-Sx5" secondAttribute="trailing" constant="20" symbolic="YES" id="oyo-Wk-Wdm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="98x-PR-rYK">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="98x-PR-rYK" id="ciM-Sj-689">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-2x-ENv" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Phone"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="Ycx-lT-Boz"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="PPU-MQ-fwa"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wXU-2x-ENv" firstAttribute="leading" secondItem="ciM-Sj-689" secondAttribute="leading" constant="20" symbolic="YES" id="auf-9B-7ru"/>
+                                                <constraint firstItem="wXU-2x-ENv" firstAttribute="centerY" secondItem="ciM-Sj-689" secondAttribute="centerY" id="fZI-X2-iLQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="wXU-2x-ENv" secondAttribute="trailing" constant="20" symbolic="YES" id="tmu-Ug-rI2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Amk-BN-6CN">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Amk-BN-6CN" id="7g1-kf-nVE">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-Eh-DjE" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Street address 1"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="F65-Kb-Wrp"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="QcB-hD-HCC"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="t0f-Eh-DjE" secondAttribute="trailing" constant="20" symbolic="YES" id="3ac-oE-6hd"/>
+                                                <constraint firstItem="t0f-Eh-DjE" firstAttribute="centerY" secondItem="7g1-kf-nVE" secondAttribute="centerY" id="fkH-JH-kEf"/>
+                                                <constraint firstItem="t0f-Eh-DjE" firstAttribute="leading" secondItem="7g1-kf-nVE" secondAttribute="leading" constant="20" symbolic="YES" id="pQZ-fC-gfu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="kdi-Ob-x5o">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kdi-Ob-x5o" id="Cdm-iV-K9L">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIw-BL-dUX" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Street address 2"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="MMn-Pd-llp"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="1k9-Nz-aQ8"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EIw-BL-dUX" firstAttribute="centerY" secondItem="Cdm-iV-K9L" secondAttribute="centerY" id="7wk-bo-GS0"/>
+                                                <constraint firstAttribute="trailing" secondItem="EIw-BL-dUX" secondAttribute="trailing" constant="20" symbolic="YES" id="Qd5-Uz-cSB"/>
+                                                <constraint firstItem="EIw-BL-dUX" firstAttribute="leading" secondItem="Cdm-iV-K9L" secondAttribute="leading" constant="20" symbolic="YES" id="s03-Qg-kZ4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="ek9-N7-AhI">
+                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ek9-N7-AhI" id="wyd-Rk-KQe">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fwe-XO-Wdb" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="City"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="uqf-L3-fLN"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="afR-Kz-87n"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fwe-XO-Wdb" firstAttribute="centerY" secondItem="wyd-Rk-KQe" secondAttribute="centerY" id="R5P-Of-edT"/>
+                                                <constraint firstItem="fwe-XO-Wdb" firstAttribute="leading" secondItem="wyd-Rk-KQe" secondAttribute="leading" constant="20" symbolic="YES" id="dWN-KK-kWK"/>
+                                                <constraint firstAttribute="trailing" secondItem="fwe-XO-Wdb" secondAttribute="trailing" constant="20" symbolic="YES" id="qNT-Sa-am0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="oEa-rj-VoU">
+                                        <rect key="frame" x="0.0" y="264" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oEa-rj-VoU" id="Ean-um-Cem">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ehw-iU-4ff" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="State"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="cWQ-4o-bum"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="LfI-aN-0uq"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ehw-iU-4ff" firstAttribute="centerY" secondItem="Ean-um-Cem" secondAttribute="centerY" id="2uo-4A-Klf"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ehw-iU-4ff" secondAttribute="trailing" constant="20" symbolic="YES" id="5Et-iW-8gf"/>
+                                                <constraint firstItem="Ehw-iU-4ff" firstAttribute="leading" secondItem="Ean-um-Cem" secondAttribute="leading" constant="20" symbolic="YES" id="tNC-fU-TDu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="0E7-H6-Kkj">
+                                        <rect key="frame" x="0.0" y="308" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0E7-H6-Kkj" id="V8S-wp-ui8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ku8-zt-zQy" customClass="FloatingLabelField" customModule="Contacts" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="12" width="280" height="18"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="ZIP"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="actionTextFieldEditing:" destination="xdR-2k-mwe" eventType="editingChanged" id="YhQ-JJ-myg"/>
+                                                        <outlet property="delegate" destination="xdR-2k-mwe" id="IvJ-mD-9Wa"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ku8-zt-zQy" secondAttribute="trailing" constant="20" symbolic="YES" id="RNG-7C-Vyn"/>
+                                                <constraint firstItem="Ku8-zt-zQy" firstAttribute="leading" secondItem="V8S-wp-ui8" secondAttribute="leading" constant="20" symbolic="YES" id="gmd-9W-C2h"/>
+                                                <constraint firstItem="Ku8-zt-zQy" firstAttribute="centerY" secondItem="V8S-wp-ui8" secondAttribute="centerY" id="nYg-tA-SIu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9d3-Zx-HJm">
+                                        <rect key="frame" x="0.0" y="352" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9d3-Zx-HJm" id="aBD-cF-8JP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voe-uZ-zQQ">
+                                                    <rect key="frame" x="88.5" y="12.5" width="143.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                                    <color key="textColor" red="0.84705882349999995" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="voe-uZ-zQQ" firstAttribute="centerY" secondItem="aBD-cF-8JP" secondAttribute="centerY" id="BN4-U2-Uh5"/>
+                                                <constraint firstItem="voe-uZ-zQQ" firstAttribute="centerX" secondItem="aBD-cF-8JP" secondAttribute="centerX" id="OOH-kZ-3aI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xdR-2k-mwe" id="ZUB-6m-UYF"/>
+                            <outlet property="delegate" destination="xdR-2k-mwe" id="jHu-iS-Ihb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fpp-qV-069">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="Ie7-l0-ImG">
+                            <connections>
+                                <action selector="actionSave:" destination="xdR-2k-mwe" id="ZAv-Xz-mbE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cityField" destination="fwe-XO-Wdb" id="EKT-re-Zy6"/>
+                        <outlet property="deleteCell" destination="9d3-Zx-HJm" id="OPs-Vg-1Dq"/>
+                        <outlet property="firstNameField" destination="Yca-K1-5VU" id="c7C-uh-4Tg"/>
+                        <outlet property="lastNameField" destination="1Yu-cB-Sx5" id="i9Q-Jt-Ygs"/>
+                        <outlet property="phoneNumberField" destination="wXU-2x-ENv" id="NQm-va-iOV"/>
+                        <outlet property="saveButton" destination="Ie7-l0-ImG" id="r7z-1X-urP"/>
+                        <outlet property="stateField" destination="Ehw-iU-4ff" id="r8T-2H-Uuy"/>
+                        <outlet property="streetAddress1Field" destination="t0f-Eh-DjE" id="ELM-Wp-Sx5"/>
+                        <outlet property="streetAddress2Field" destination="EIw-BL-dUX" id="0NQ-uT-0bn"/>
+                        <outlet property="zipCodeField" destination="Ku8-zt-zQy" id="Z8w-6C-KXs"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laK-Qy-3Nt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.75" y="158.45070422535213"/>
+        </scene>
+    </scenes>
+</document>

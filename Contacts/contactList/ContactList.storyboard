@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gfm-2x-4gD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="8nu-FZ-evN">
+            <objects>
+                <navigationController id="Gfm-2x-4gD" customClass="CustomNavigationController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kJ3-Yt-i7p">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0Xa-KZ-t7b" kind="relationship" relationship="rootViewController" id="nKk-O1-r3e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HjY-WU-brm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="172"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="kUj-lI-gt5">
+            <objects>
+                <viewController id="0Xa-KZ-t7b" customClass="ContactListViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uFw-ga-CyH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c2V-lM-8P1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contact" id="MHf-FM-amH" customClass="ContactCell" customModule="Contacts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MHf-FM-amH" id="v62-X9-tad">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ID3-3D-3D1">
+                                                    <rect key="frame" x="20" y="11.5" width="335" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhC-XS-eVC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="51.5" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv6-fi-3UY">
+                                                            <rect key="frame" x="59.5" y="0.0" width="275.5" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ID3-3D-3D1" firstAttribute="leading" secondItem="v62-X9-tad" secondAttribute="leading" constant="20" symbolic="YES" id="1IT-yO-1JC"/>
+                                                <constraint firstAttribute="trailing" secondItem="ID3-3D-3D1" secondAttribute="trailing" constant="20" symbolic="YES" id="cyz-6p-xOC"/>
+                                                <constraint firstItem="ID3-3D-3D1" firstAttribute="centerY" secondItem="v62-X9-tad" secondAttribute="centerY" id="isj-Di-KhW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstNameLabel" destination="UhC-XS-eVC" id="AF2-3a-EkT"/>
+                                            <outlet property="lastNameLabel" destination="Yv6-fi-3UY" id="TWt-Ua-hHm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0Xa-KZ-t7b" id="vYK-yb-pAN"/>
+                                    <outlet property="delegate" destination="0Xa-KZ-t7b" id="5qe-Mk-Zxj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PnV-M5-vZ1" firstAttribute="trailing" secondItem="c2V-lM-8P1" secondAttribute="trailing" id="FO4-rb-lD8"/>
+                            <constraint firstItem="c2V-lM-8P1" firstAttribute="top" secondItem="PnV-M5-vZ1" secondAttribute="top" id="Gx6-4i-FBJ"/>
+                            <constraint firstItem="PnV-M5-vZ1" firstAttribute="bottom" secondItem="c2V-lM-8P1" secondAttribute="bottom" id="lL1-0L-nov"/>
+                            <constraint firstItem="c2V-lM-8P1" firstAttribute="leading" secondItem="PnV-M5-vZ1" secondAttribute="leading" id="ptB-Ua-aUD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PnV-M5-vZ1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="S9h-ua-Vli">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X9n-aF-aWa">
+                            <connections>
+                                <action selector="actionAdd:" destination="0Xa-KZ-t7b" id="YVb-Jh-awN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="c2V-lM-8P1" id="6Hi-bx-6fc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ca-pF-Oy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143" y="173"/>
+        </scene>
+    </scenes>
+</document>
